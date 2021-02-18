@@ -1,4 +1,5 @@
 import React from "react";
+import "Alert.scss";
 
 export type alertType = "info" | "error" | "warn";
 
