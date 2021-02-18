@@ -3,6 +3,12 @@ import { Alert, IAlertProps } from "../components/Alert/Alert.tsx";
 
 const Template = (args: IAlertProps) => <Alert {...args} />;
 
+export const Primary = Template.bind({});
+Primary.args = {
+    text: "Primary Alert",
+    type: "primary"
+};
+
 export const Information = Template.bind({});
 Information.args = {
     text: "Information Alert",
