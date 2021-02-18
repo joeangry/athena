@@ -1,18 +1,19 @@
 import React from "react";
 
-import { Label, ILabelProps } from "./Label.tsx";
+import { Label, ILabelProps } from "../components/Label/Label.tsx";
 
 const Template = (args: ILabelProps) => <Label {...args} />;
 
 export const BasicLabel = Template.bind({});
 BasicLabel.args = {
-    text: "Hello World"
+    text: "Hello World",
+    classes: "test"
 };
 
 
 const defaultExport = {
     title: "Basic Components/Label",
-    component: Label,
+    component: Label
 };
 
 export default defaultExport;

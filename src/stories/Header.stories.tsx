@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header, IHeaderProps } from "./Header.tsx";
+import { Header, IHeaderProps } from "../components/Header/Header.tsx";
 
 const Template = (args: IHeaderProps) => <Header {...args} />;
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button } from "./Button.tsx";
+import { Button } from "../components/Button/Button.tsx";
 
 const Template = (args) => <Button {...args} />;
 

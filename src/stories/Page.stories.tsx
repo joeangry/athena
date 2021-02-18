@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Page } from "./Page.tsx";
-import * as HeaderStories from "../Header/Header.stories.tsx";
+import { Page } from "../components/Page/Page.tsx";
+import * as HeaderStories from "./Header.stories.tsx";
 
 const Template = (args) => <Page {...args} />;
 

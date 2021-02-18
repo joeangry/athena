@@ -1,5 +1,5 @@
 import React from "react";
-import { Alert, IAlertProps } from "./Alert.tsx";
+import { Alert, IAlertProps } from "../components/Alert/Alert.tsx";
 
 const Template = (args: IAlertProps) => <Alert {...args} />;
 
