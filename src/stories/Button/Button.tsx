@@ -1,8 +1,8 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import "./button.css";
 import { Property } from "csstype";
 
-interface IProps {
+interface IButtonProps {
     primary: boolean;
     backgroundColor: Property.BackgroundClip;
     size: "small" | "media" | "large";
@@ -13,7 +13,7 @@ interface IProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = (props: IProps) => {
+export const Button = (props: IButtonProps) => {
     const mode = props.primary ? "storybook-button--primary" : "storybook-button--secondary";
     return (
         <button
