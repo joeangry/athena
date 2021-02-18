@@ -1,10 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import { Button } from "../Button/Button.tsx";
 import "./header.css";
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
+export interface IHeaderProps {
+    user: any;
+    onLogin: (e: any) => void;
+    onLogout: (e: any) => void;
+    onCreateAccount: (e: any) => void;
+}
+
+export const Header = (props: IHeaderProps) => (
     <header>
         <div className="wrapper">
             <div>
@@ -27,26 +33,15 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
                 <h1>Acme</h1>
             </div>
             <div>
-                {user ? (
-                    <Button size="small" onClick={onLogout} label="Log out" />
+                {props.user ? (
+                    <Button size="small" onClick={props.onLogout} label="Log out" />
                 ) : (
                         <>
-                            <Button size="small" onClick={onLogin} label="Log in" />
-                            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
+                            <Button size="small" onClick={props.onLogin} label="Log in" />
+                            <Button primary size="small" onClick={props.onCreateAccount} label="Sign up" />
                         </>
                     )}
             </div>
         </div>
     </header>
 );
-
-Header.propTypes = {
-    user: PropTypes.shape({}),
-    onLogin: PropTypes.func.isRequired,
-    onLogout: PropTypes.func.isRequired,
-    onCreateAccount: PropTypes.func.isRequired,
-};
-
-Header.defaultProps = {
-    user: null,
-};

@@ -1,13 +1,8 @@
 import React from "react";
 
-import { Header } from "./Header.tsx";
+import { Header, IHeaderProps } from "./Header.tsx";
 
-export default {
-    title: "Example/Header",
-    component: Header,
-};
-
-const Template = (args) => <Header {...args} />;
+const Template = (args: IHeaderProps) => <Header {...args} />;
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
@@ -16,3 +11,10 @@ LoggedIn.args = {
 
 export const LoggedOut = Template.bind({});
 LoggedOut.args = {};
+
+const defaultExport = {
+    title: "Example/Header",
+    component: Header,
+};
+
+export default defaultExport;
