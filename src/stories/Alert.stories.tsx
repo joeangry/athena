@@ -6,19 +6,19 @@ const Template = (args: IAlertProps) => <Alert {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
     text: "Primary Alert",
-    type: "primary"
+    type: "Primary"
 };
 
 export const Information = Template.bind({});
 Information.args = {
     text: "Information Alert",
-    type: "info"
+    type: "Info"
 };
 
 export const Error = Template.bind({});
 Error.args = {
     text: "Error Alert",
-    type: "error"
+    type: "Danger"
 };
 
 const defaultExport = {
