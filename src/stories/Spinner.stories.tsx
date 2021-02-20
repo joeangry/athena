@@ -1,19 +1,18 @@
-// import React from "react";
+import React from "react";
 
-// import { Label, ILabelProps } from "./components/Spinner/Spinner.tsx";
+import { Spinner, ISpinnerProps } from "../components/Spinner/Spinner.tsx";
 
-// const Template = (args: ILabelProps) => <Label {...args} />;
+const Template = (args: ISpinnerProps) => <Spinner {...args} />;
 
-// export const BasicLabel = Template.bind({});
-// BasicLabel.args = {
-//     text: "Hello World",
-//     classes: "test"
-// };
+export const PrimarySpinner = Template.bind({});
+PrimarySpinner.args = {
+    text: "Loading...",
+    type: "Primary"
+};
 
+const defaultExport = {
+    title: "Basic Components/Spinner",
+    component: Spinner
+};
 
-// const defaultExport = {
-//     title: "Basic Components/Label",
-//     component: Label
-// };
-
-// export default defaultExport;
+export default defaultExport;
