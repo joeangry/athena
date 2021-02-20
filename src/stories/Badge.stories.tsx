@@ -1,23 +1,18 @@
-// import React from "react";
-// import { Alert, IAlertProps } from "./Alert.tsx";
+import React from "react";
+import { Badge, IBadgeProps } from "../components/Badge/Badge.tsx";
 
-// const Template = (args: IAlertProps) => <Alert {...args} />;
+const Template = (args: IBadgeProps) => (<Badge {...args} />);
 
-// export const Information = Template.bind({});
-// Information.args = {
-//     text: "Information Alert",
-//     type: "info"
-// };
+export const CountBadge = Template.bind({});
+CountBadge.args = {
+    text: "500",
+    bgColor: "bg-secondary",
+    type: "Primary"
+};
 
-// export const Error = Template.bind({});
-// Error.args = {
-//     text: "Error Alert",
-//     type: "error"
-// };
+const defaultExport = {
+    title: "Basic components/Badge",
+    component: Badge,
+};
 
-// const defaultExport = {
-//     title: "Basic components/Alert",
-//     component: Alert,
-// };
-
-// export default defaultExport;
+export default defaultExport;
