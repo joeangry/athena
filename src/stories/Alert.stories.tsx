@@ -9,6 +9,13 @@ Primary.args = {
     type: "Primary"
 };
 
+export const CanDismiss = Template.bind({});
+CanDismiss.args = {
+    text: "Primary Alert",
+    type: "Primary",
+    canDismiss: true
+};
+
 export const Information = Template.bind({});
 Information.args = {
     text: "Information Alert",
