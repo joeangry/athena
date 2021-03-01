@@ -17,5 +17,5 @@ steps:
 
 - script: |
     npm install --force
-    npm run storybook
+    npm run build-storybook
   displayName: 'npm install and run storybook'
