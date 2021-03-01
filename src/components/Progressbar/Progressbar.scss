@@ -1,0 +1,21 @@
+@import "../Colors.scss";
+
+.progress {
+    padding: 8px;
+    width: 100%;   
+}
+
+.progress-label {
+    margin-bottom: 4px;
+}
+
+.progress-track {
+    background-color: $color-light-grey;
+    height: 2px;
+}
+
+.progress-track-fill {
+    background-color: $color-primary;
+    height: 2px;
+}
+

@@ -1,19 +1,21 @@
-// import React from "react";
+import React from "react";
 
-// import { Label, ILabelProps } from "./Label.tsx";
+import { ProgressBar, IProgressbarProps } from "../components/Progressbar/Progressbar.tsx";
 
-// const Template = (args: ILabelProps) => <Label {...args} />;
+const Template = (args: IProgressbarProps) => <ProgressBar {...args} />;
 
-// export const BasicLabel = Template.bind({});
-// BasicLabel.args = {
-//     text: "Hello World",
-//     classes: "test"
-// };
+export const BasicProgressbar = Template.bind({});
+BasicProgressbar.args = {
+    label: "Example title",
+    description: "Example description",
+    percentCompleted: 70
+};
 
 
-// const defaultExport = {
-//     title: "Basic Components/Label",
-//     component: Label
-// };
+const defaultExport = {
+    title: "Basic Components/Progressbar",
+    component: ProgressBar
+};
 
-// export default defaultExport;
+
+export default defaultExport;
