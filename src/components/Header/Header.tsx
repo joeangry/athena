@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Button } from "../Button/Button.tsx";
-import "./header.css";
+import "./header.scss";
 
 export interface IHeaderProps {
     user: any;
