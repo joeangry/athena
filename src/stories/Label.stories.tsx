@@ -10,6 +10,12 @@ BasicLabel.args = {
     classes: "test"
 };
 
+export const RequiredLabel = Template.bind({});
+RequiredLabel.args = {
+    text: "I am a required field",
+    required: true
+}
+
 
 const defaultExport = {
     title: "Basic Components/Label",

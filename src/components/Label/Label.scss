@@ -1,0 +1,9 @@
+@import "../Colors.scss";
+
+.label {
+    font-weight: 400;
+
+    .required-marker {
+        color: $color-danger;
+    }
+}
