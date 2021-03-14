@@ -6,10 +6,12 @@ export interface IProgressbarProps {
     description: string;
     percentCompleted?: number;
     isIndeterminate?: boolean;
+    maxProgress?: number;
 }
 
 export const ProgressBar = (props: IProgressbarProps) => {
-    const percentCompleted = props.percentCompleted;
+    
+    const percentCompleted = (props.maxProgress && props.percentCompleted > props.maxProgress) ? props.maxProgress : props.percentCompleted;
 
     return (<div className="progress">
         <div className={"progress-label"}>
