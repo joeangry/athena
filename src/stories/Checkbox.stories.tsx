@@ -6,6 +6,7 @@ const Template = (args) => <Checkbox {...args} />;
 
 export const Checked = Template.bind({});
 Checked.args = {
+    label: "Check me out!",
     checked: true
 };
 
