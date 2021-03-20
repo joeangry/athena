@@ -13,7 +13,7 @@ export const ProgressBar = (props: IProgressbarProps) => {
     
     const percentCompleted = (props.maxProgress && props.percentCompleted > props.maxProgress) ? props.maxProgress : props.percentCompleted;
 
-    return (<div className="progress">
+    return (<div className={"progress"}>
         <div className={"progress-label"}>
             {props.label}
         </div>

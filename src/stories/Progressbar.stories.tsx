@@ -11,6 +11,12 @@ BasicProgressbar.args = {
     percentCompleted: 70
 };
 
+export const IndeterminateProgressbar = Template.bind({});
+IndeterminateProgressbar.args = {
+    label: "Example title",
+    description: "Example description",
+    isIndeterminate: true
+};
 
 const defaultExport = {
     title: "Basic Components/Progressbar",
