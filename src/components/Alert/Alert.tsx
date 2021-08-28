@@ -3,7 +3,7 @@ import "./Alert.scss";
 
 export type AlertType = "Primary" | "Secondary" | "Success" | "Danger" | "Warning" | "Info" | "Light" | "Dark";
 
-export interface IAlertProps {
+export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
     text: string;
     type: AlertType;
     additionalClasses?: string;
@@ -12,7 +12,7 @@ export interface IAlertProps {
     onDismissClick?: (e: any) => void;
 }
 
-export const Alert = (props: IAlertProps) => {
+export const Alert = (props: AlertProps) => {
 
     const [isDismissed, setDismissed] = useState(false);
 

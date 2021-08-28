@@ -1,7 +1,7 @@
 import React from "react";
-import { Badge, IBadgeProps } from "../components/Badge/Badge.tsx";
+import { Badge, IBadgeProps as BadgeProps } from "../components/Badge/Badge.tsx";
 
-const Template = (args: IBadgeProps) => (<Badge {...args} />);
+const Template = (args: BadgeProps) => (<Badge {...args} />);
 
 export const CountBadge = Template.bind({});
 CountBadge.args = {

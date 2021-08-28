@@ -1,7 +1,7 @@
 import React from "react";
-import { Alert, IAlertProps } from "../components/Alert/Alert.tsx";
+import { Alert, AlertProps } from "../components/Alert/Alert.tsx";
 
-const Template = (args: IAlertProps) => <Alert {...args} />;
+const Template = (args: AlertProps) => <Alert {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
