@@ -24,6 +24,7 @@ export const ProgressBar = (props: IProgressbarProps) => {
                 aria-valuemin="0"
                 aria-valuemax="100"
                 aria-valuenow={percentCompleted}
+                aria-label="Progressbar"
             ></div>
         </div>
         <div>
