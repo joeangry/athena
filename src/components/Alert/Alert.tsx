@@ -9,29 +9,27 @@ export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
     additionalClasses?: string;
     canDismiss: boolean;
     dismissText?: string;
-    onDismissClick?: (e: any) => void;
+    onDismissClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const Alert = (props: AlertProps) => {
 
     const [isDismissed, setDismissed] = useState(false);
+    const { additionalClasses, canDismiss, dismissText, onDismissClick, text, type } = props;
 
-    const dismissClick = (e: any) => {
+    const dismissClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 
-        if (props.onDismissClick) {
-            props.onDismissClick(e);
+        if (onDismissClick) {
+            onDismissClick(e);
         }
 
-        if (isDismissed)
-            setDismissed(false);
-        else
-            setDismissed(true);
+        setDismissed(true);
     }
 
-    return (<div className={`alert alert-${props.type.toLowerCase()}${props.additionalClasses ? ` ${props.additionalClasses}` : ""}${isDismissed ? " fade" : ""}`} role="alert">
-        {props.text} - State {isDismissed.toString()}
-        {props.canDismiss &&
-            <button type="button" className="btn-close" onClick={(e) => dismissClick(e)} aria-label={props.dismissText ? props.dismissText : ""}></button>
+    return (<div className={`alert alert-${type.toLowerCase()}${additionalClasses ? ` ${additionalClasses}` : ""}${isDismissed ? " fade" : ""}`} role="alert">
+        {text}
+        {canDismiss &&
+            <button type="button" className="btn-close" onClick={(e) => dismissClick(e)} aria-label={dismissText ? dismissText : ""}></button>
         }
     </div>);
 }
