@@ -35,7 +35,7 @@ PrimaryLarge.args = {
 }
 
 const defaultExport = {
-    title: "Basic components/Button",
+    title: "Components/Button",
     component: Button,
     argTypes: {
         backgroundColor: { control: "color" },

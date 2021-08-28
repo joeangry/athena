@@ -18,7 +18,7 @@ RequiredLabel.args = {
 
 
 const defaultExport = {
-    title: "Basic Components/Label",
+    title: "Components/Label",
     component: Label
 };
 

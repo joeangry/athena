@@ -29,7 +29,7 @@ Error.args = {
 };
 
 const defaultExport = {
-    title: "Basic components/Alert",
+    title: "Components/Alert",
     component: Alert,
 };
 

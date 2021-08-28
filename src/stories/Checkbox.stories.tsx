@@ -16,7 +16,7 @@ Unchecked.args = {
 };
 
 const defaultExport = {
-    title: "Basic components/Checkbox",
+    title: "Components/Checkbox",
     component: Checkbox,
 };
 

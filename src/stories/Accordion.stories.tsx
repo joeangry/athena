@@ -10,7 +10,7 @@ Default.args = {
 };
 
 const defaultExport = {
-    title: "Basic components/Accordion",
+    title: "Components/Accordion",
     component: Accordion,
     argTypes: {
     },

@@ -19,7 +19,7 @@ IndeterminateProgressbar.args = {
 };
 
 const defaultExport = {
-    title: "Basic Components/Progressbar",
+    title: "Components/Progressbar",
     component: ProgressBar
 };
 

@@ -11,7 +11,7 @@ CountBadge.args = {
 };
 
 const defaultExport = {
-    title: "Basic components/Badge",
+    title: "Components/Badge",
     component: Badge,
 };
 

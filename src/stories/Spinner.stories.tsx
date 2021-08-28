@@ -11,7 +11,7 @@ PrimarySpinner.args = {
 };
 
 const defaultExport = {
-    title: "Basic Components/Spinner",
+    title: "Components/Spinner",
     component: Spinner
 };
 
