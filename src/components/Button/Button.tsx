@@ -7,7 +7,7 @@ interface ButtonProps {
     backgroundColor: Property.BackgroundClip;
     size: "small" | "media" | "large";
     label: string;
-    onClick: (e: any) => void;
+    onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 /**
@@ -15,13 +15,15 @@ interface ButtonProps {
  */
 export const Button = (props: ButtonProps) => {
     const mode = props.primary ? "storybook-button--primary" : "storybook-button--secondary";
+
+    const { backgroundColor, onClick } = props;
+
     return (
         <button
             type="button"
             className={["storybook-button", `storybook-button--${props.size}`, mode].join(" ")}
-            style={ { backgroundColor: props.backgroundColor }}
-            onClick={(e) => props.onClick(e)}
-            {...props}
+            style={{ backgroundColor: backgroundColor }}
+            onClick={(e) => onClick(e)}
         >
             {props.label}
         </button>
