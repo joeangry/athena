@@ -1,0 +1,11 @@
+# folders to ignore
+node_modules
+tests
+public
+storybook-static
+.github
+.storybook
+src/stories
+
+# files to ignore
+azure-pipelines.yml
