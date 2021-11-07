@@ -1,20 +1,29 @@
 import React from "react";
+import "./Avatar.scss";
 
 type AvatarSize = "small" | "large" | "default";
+
+type AvatarFrame = "round" | "round-corner" | "square";
+
 export interface AvatarProps {
-    isLoading: boolean;
     size: AvatarSize;
+    imageSource: string;
+    frame: AvatarFrame;
 }
 
 export const Avatar = (props: AvatarProps) => {
 
-    const { isLoading, size } = props;
+    const { frame, imageSource, size } = props;
 
-    if (isLoading === true) {
-        return (<div>
-
-        </div>);
+    const getAvatarStyle = (): string => {
+        return `avatar avatar-${[size].join(" ")}`;
     }
 
-    return (<div className={`avatar ${[size].join(" ")}`}></div>);
+    const getAvatarFrame = (): string => {
+        return `avatar-${frame}`;
+    }
+
+    return (<div className={getAvatarStyle()}>
+        <img src={imageSource} alt={"Avatar"} className={getAvatarFrame()} />
+    </div>);
 };
