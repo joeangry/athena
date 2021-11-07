@@ -11,7 +11,7 @@ export interface IProgressbarProps {
 
 export const ProgressBar = (props: IProgressbarProps) => {
     
-    const percentCompleted = (props.maxProgress && props.percentCompleted > props.maxProgress) ? props.maxProgress : props.percentCompleted;
+    const percentCompleted = (props.maxProgress && (props.percentCompleted && props.percentCompleted > props.maxProgress)) ? props.maxProgress : props.percentCompleted;
 
     return (<div className={"progress"}>
         <div className={"progress-label"}>
@@ -20,9 +20,9 @@ export const ProgressBar = (props: IProgressbarProps) => {
         <div className="progress-track">
             <div className={props.isIndeterminate ? "progress-indeterminate" : "progress-track-fill"}
                 role="progressbar"
-                style={props.isIndeterminate ? null : { width: percentCompleted + "%" }}
-                aria-valuemin="0"
-                aria-valuemax="100"
+                style={props.isIndeterminate ? undefined : { width: `${percentCompleted}%` }}
+                aria-valuemin={0}
+                aria-valuemax={props.maxProgress}
                 aria-valuenow={percentCompleted}
                 aria-label="Progressbar"
             ></div>
