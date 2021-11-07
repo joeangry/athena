@@ -1,35 +1,48 @@
-.storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+@import "../Colors.scss";
+
+.btn {
+    font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    border: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.3333333333;
+
+    padding: 8px 16px;
+}    
+
+.button-primary {
+    color: $color-white;
+    background-color: $color-primary;
+    border-color: #03A9F4;
+    box-shadow: none;
+
+    &:hover {
+        background-color: #67DAFF;
+        border-color: #03A9F4;
+        color: $color-white;
+    }
 }
 
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
+.button-secondary {
+    color: #333;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }
 
-.storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+.button-small {
+    font-size: 12px;
+    padding: 10px 16px;
 }
 
-.storybook-button--small {
-  font-size: 12px;
-  padding: 10px 16px;
+.button-medium {
+    font-size: 14px;
+    padding: 11px 20px;
 }
 
-.storybook-button--medium {
-  font-size: 14px;
-  padding: 11px 20px;
-}
-
-.storybook-button--large {
-  font-size: 16px;
-  padding: 12px 24px;
+.button-large {
+    font-size: 16px;
+    padding: 12px 24px;
 }

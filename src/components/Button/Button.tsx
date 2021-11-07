@@ -1,27 +1,33 @@
 import React from "react";
 import "./button.scss";
-import { Property } from "csstype";
 
 interface ButtonProps {
     primary: boolean;
-    backgroundColor: Property.BackgroundClip;
-    size: "small" | "media" | "large";
+    backgroundColor: string;
+    size: "small" | "medium" | "large";
     label: string;
     onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    type?: "submit" | "button" | "reset";
+    innerRef?: any;
 }
 
 /**
  * Primary UI component for user interaction
  */
 export const Button = (props: ButtonProps) => {
-    const mode = props.primary ? "storybook-button--primary" : "storybook-button--secondary";
+    const mode = props.primary ? "button-primary" : "button-secondary";
 
     const { backgroundColor, onClick } = props;
 
+    const getClassNames = (): string => {
+        return ["btn", `btn-${props.size}`, mode].join(" ");
+    }
+
     return (
         <button
+            ref={props.innerRef}
             type="button"
-            className={["storybook-button", `storybook-button--${props.size}`, mode].join(" ")}
+            className={getClassNames()}
             style={{ backgroundColor: backgroundColor }}
             onClick={(e) => onClick(e)}
         >
@@ -30,9 +36,9 @@ export const Button = (props: ButtonProps) => {
     );
 };
 
-Button.defaultProps = {
-    backgroundColor: null,
-    primary: false,
-    size: "medium",
-    onClick: undefined,
-};
+// Button.defaultProps = {
+//     backgroundColor: null,
+//     primary: false,
+//     size: "medium",
+//     onClick: undefined,
+// };
