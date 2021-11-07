@@ -5,11 +5,16 @@ export type BadgeType = "Primary" | "Secondary" | "Success" | "Danger" | "Warnin
 
 export interface IBadgeProps {
     text: string;
-    bgColor?: string;
+    type: BadgeType;
 }
 
 export const Badge = (props: IBadgeProps) => {
-    return (<div className={`badge ${props.bgColor}`}>
+
+    const getClassNames = (): string => {
+        return ["badge", `badge-${props.type.toLowerCase()}`].join(" ");
+    }
+
+    return (<div className={getClassNames()}>
         {props.text}
     </div>);
 }

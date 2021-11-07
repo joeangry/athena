@@ -1,19 +1,42 @@
 @import "../Colors.scss";
 
 .badge {
+    font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
 
     display: inline-block;
-    padding: .35em .65em;
-    font-size: .75em;
-    font-weight: 700;
-    line-height: 1;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+
+    line-height: 1.3333333333;
     color: $color-white;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
 }
 
-.bg-secondary {
+.badge-secondary {
     background-color: $color-secondary;
+}
+
+.badge-primary {
+    background-color: $color-primary;
+}
+
+.badge-success {
+    background-color: $color-success;
+}
+
+.badge-danger {
+    background-color: $color-danger;
+}
+
+.badge-warning {
+    background-color: $color-warning;
+}
+
+.badge-info {
+    background-color: $color-info;
 }
