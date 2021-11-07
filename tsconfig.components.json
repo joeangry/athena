@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "outDir": "lib/esm"
+    },
+    "include": [
+        "src/components"
+    ],
+    "exclude": [
+        "node_modules",
+        "lib",
+        "src/**/*.spec.ts*",
+        "src/**/*.test.ts*"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "outDir": "lib/esm"
+    },
+    "include": [
+        "src/resources"
+    ],
+    "exclude": [
+        "node_modules",
+        "lib",
+        ".github"
+    ]
+}
