@@ -1,7 +1,7 @@
 import React from "react";
 import "./Avatar.scss";
 
-type AvatarSize = "small" | "large" | "default";
+type AvatarSize = "tiny" | "small" | "medium" | "large";
 
 type AvatarFrame = "round" | "round-corner" | "square";
 
@@ -24,6 +24,6 @@ export const Avatar = (props: AvatarProps) => {
     }
 
     return (<div className={getAvatarStyle()}>
-        <img src={imageSource} alt={"Avatar"} className={getAvatarFrame()} />
+        <img src={imageSource} alt={"Avatar"} className={getAvatarFrame() + getAvatarStyle()} />
     </div>);
 };
