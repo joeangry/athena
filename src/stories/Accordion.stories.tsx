@@ -5,6 +5,12 @@ const Template = (args: IAccordionProps) => <Accordion {...args} />;
 
 export const Default = Template.bind({});
 
+export const OpenAccordion = Template.bind({});
+OpenAccordion.args = {
+    title: "Accordion",
+    content: <div>hello world!</div>
+}
+
 Default.args = {
     title: "Accordion",
 };
