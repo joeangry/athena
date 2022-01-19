@@ -1,12 +1,12 @@
 import React from "react";
+import { Styles, Variants } from "../../packages/BaseProps";
 import "./Spinner.scss";
 
-export type SpinnerType = "Primary" | "Secondary" | "Success" | "Danger" | "Warning" | "Info" | "Light" | "Dark";
-
-export type SpinnerSize = "Small" | "Medium" | "Large";
+export type SpinnerStyle = keyof Styles;
+export type SpinnerSize = keyof Variants;
 
 export interface ISpinnerProps {
-    type: SpinnerType;
+    type: SpinnerStyle;
     text?: string;
     size?: SpinnerSize;
 }

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Styles } from "../../packages/BaseProps";
 import "./Alert.scss";
 
-export type AlertType = "Primary" | "Secondary" | "Success" | "Danger" | "Warning" | "Info" | "Light" | "Dark";
+export type AlertType = keyof Styles;
 
 export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
     text: string;
