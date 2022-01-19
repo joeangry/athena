@@ -3,8 +3,6 @@ import { Variants } from "../../packages/BaseProps";
 import { AvatarBadge } from "./AvatarBadge";
 import "./Avatar.scss";
 
-
-// type AvatarSize = "tiny" | "small" | "medium" | "large";
 type AvatarSize = keyof Variants;
 
 type AvatarFrame = "round" | "round-corner" | "square";
