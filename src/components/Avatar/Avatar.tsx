@@ -1,7 +1,11 @@
 import React from "react";
+import { Variants } from "../../packages/BaseProps";
+import { AvatarBadge } from "./AvatarBadge";
 import "./Avatar.scss";
 
-type AvatarSize = "tiny" | "small" | "medium" | "large";
+
+// type AvatarSize = "tiny" | "small" | "medium" | "large";
+type AvatarSize = keyof Variants;
 
 type AvatarFrame = "round" | "round-corner" | "square";
 
@@ -11,19 +15,22 @@ export interface AvatarProps {
     frame: AvatarFrame;
 }
 
-export const Avatar = (props: AvatarProps) => {
+export const Avatar = (props: React.PropsWithChildren<AvatarProps>) => {
 
     const { frame, imageSource, size } = props;
 
-    const getAvatarStyle = (): string => {
-        return `avatar avatar-${[size].join(" ")}`;
+    const getAvatarSize = (): string => {
+        return `avatar-${[size].join(" ")}`;
     }
 
     const getAvatarFrame = (): string => {
         return `avatar-${frame}`;
     }
 
-    return (<div className={getAvatarStyle()}>
-        <img src={imageSource} alt={"Avatar"} className={getAvatarFrame() + getAvatarStyle()} />
+    return (<div className={getAvatarSize()}>
+        <img src={imageSource} alt={"Avatar"} className={`avatar ${getAvatarFrame()} ${getAvatarSize()}`} />
+        {props.children}
     </div>);
 };
+
+export { AvatarBadge };
