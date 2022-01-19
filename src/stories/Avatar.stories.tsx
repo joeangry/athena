@@ -1,7 +1,9 @@
 import React from "react";
-import { Avatar, AvatarProps } from "../components/Avatar/Avatar.tsx";
+import { Avatar, AvatarProps, AvatarBadge } from "../components/Avatar/Avatar.tsx";
+import { AvatarBadgeProps } from "../components/Avatar/AvatarBadge";
 
 const Template = (args: AvatarProps) => <Avatar {...args} />;
+const TemplateWithChildren = (args: AvatarProps, args2: AvatarBadgeProps) => <Avatar {...args}><AvatarBadge {...args2} /></Avatar>;
 
 const Base = {
     imageSource: "https://i.pravatar.cc/150?img=28"
@@ -20,6 +22,17 @@ Round.args = {
     size: "large",
     frame: "round"
 };
+
+export const AvatarWithBadge = TemplateWithChildren.bind({});
+AvatarWithBadge.args = {
+    ...Base,
+    size: "large",
+    frame: "round"
+}
+AvatarWithBadge.args2 = {
+    borderColor: "papayawhip",
+    backgroundColor: "pink"
+}
 
 const defaultExport = {
     title: "Components/Avatar",
