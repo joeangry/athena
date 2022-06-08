@@ -1,10 +1,14 @@
 import React from "react";
-import "./button.scss";
+import { Styles, Variants } from "../../packages/BaseProps";
+import "./Button.scss";
+
+type ButtonVariants = keyof Variants;
+type ButtonStyle = keyof Styles;
 
 interface ButtonProps {
-    primary: boolean;
-    backgroundColor: string;
-    size: "small" | "medium" | "large";
+    additionalClasses: string[] | undefined;
+    style: ButtonStyle;
+    size: ButtonVariants;
     label: string;
     onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
     type?: "submit" | "button" | "reset";
@@ -15,12 +19,11 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = (props: ButtonProps) => {
-    const mode = props.primary ? "button-primary" : "button-secondary";
 
-    const { backgroundColor, onClick } = props;
+    const { additionalClasses, onClick } = props;
 
     const getClassNames = (): string => {
-        return ["btn", `btn-${props.size}`, mode].join(" ");
+        return ["btn", `btn-${props.size}`, additionalClasses].join(" ");
     }
 
     return (
@@ -28,17 +31,9 @@ export const Button = (props: ButtonProps) => {
             ref={props.innerRef}
             type="button"
             className={getClassNames()}
-            style={{ backgroundColor: backgroundColor }}
             onClick={(e) => onClick(e)}
         >
             {props.label}
         </button>
     );
 };
-
-// Button.defaultProps = {
-//     backgroundColor: null,
-//     primary: false,
-//     size: "medium",
-//     onClick: undefined,
-// };
