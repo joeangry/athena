@@ -1,6 +1,6 @@
 import React from "react";
 import { Styles, Variants } from "../../packages/BaseProps";
-import "./Button.scss";
+import "./button.scss";
 
 type ButtonVariants = keyof Variants;
 type ButtonStyle = keyof Styles;
