@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Button } from "../components/Button/Button.tsx";
+import { Button, ButtonProps } from "../components/Button/Button";
 
-const Template = (args) => <Button {...args} />;
+const Template = (args: ButtonProps) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

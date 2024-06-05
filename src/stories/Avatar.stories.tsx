@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, AvatarProps, AvatarBadge } from "../components/Avatar/Avatar.tsx";
+import { Avatar, AvatarProps, AvatarBadge } from "../components/Avatar/Avatar";
 import { AvatarBadgeProps } from "../components/Avatar/AvatarBadge";
 
 const Template = (args: AvatarProps) => <Avatar {...args} />;

@@ -1,7 +1,7 @@
 import React from "react";
-import { Grid, GridProps } from "../components/Grid/Grid.tsx";
+import { Grid, GridProps } from "../components/Grid/Grid";
 
-const Template = (args) => <Grid {...args} />;
+const Template = (args: GridProps) => <Grid {...args} />;
 
 export const GridLayout = Template.bind({});
 GridLayout.args = {

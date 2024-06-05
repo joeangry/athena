@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Checkbox } from "../components/Checkbox/Checkbox.tsx";
+import { Checkbox, CheckboxProps } from "../components/Checkbox/Checkbox";
 
-const Template = (args) => <Checkbox {...args} />;
+const Template = (args: CheckboxProps) => <Checkbox {...args} />;
 
 export const Checked = Template.bind({});
 Checked.args = {

@@ -1,5 +1,5 @@
 import React from "react";
-import { IAccordionProps, Accordion } from "../components/Accordion/Accordion.tsx";
+import { IAccordionProps, Accordion } from "../components/Accordion/Accordion";
 
 const Template = (args: IAccordionProps) => <Accordion {...args} />;
 

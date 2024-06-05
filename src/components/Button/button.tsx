@@ -1,11 +1,11 @@
 import React from "react";
 import { Styles, Variants } from "../../packages/BaseProps";
-import "./button.scss";
+import "./Button.scss";
 
 type ButtonVariants = keyof Variants;
 type ButtonStyle = keyof Styles;
 
-interface ButtonProps {
+export interface ButtonProps {
     additionalClasses: string[] | undefined;
     style: ButtonStyle;
     size: ButtonVariants;
