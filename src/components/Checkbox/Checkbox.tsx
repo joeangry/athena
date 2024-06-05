@@ -1,7 +1,7 @@
 import React from "react";
 import "./Checkbox.scss";
 
-interface ICheckboxProps {
+export interface CheckboxProps {
     className?: string;
     checked?: boolean;
     label?: string;
@@ -10,7 +10,7 @@ interface ICheckboxProps {
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Checkbox = (props: ICheckboxProps) => {
+export const Checkbox = (props: CheckboxProps) => {
     return (<>       
         <label className="container">{props.label}
             <input type="checkbox" checked={props.checked} />

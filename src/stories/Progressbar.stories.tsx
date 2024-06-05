@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ProgressBar, IProgressbarProps } from "../components/Progressbar/Progressbar.tsx";
+import { ProgressBar, IProgressbarProps } from "../components/Progressbar/Progressbar";
 
 const Template = (args: IProgressbarProps) => <ProgressBar {...args} />;
 

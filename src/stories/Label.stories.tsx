@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Label, ILabelProps } from "../components/Label/Label.tsx";
+import { Label, ILabelProps } from "../components/Label/Label";
 
 const Template = (args: ILabelProps) => <Label {...args} />;
 

@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Spinner, ISpinnerProps } from "../components/Spinner/Spinner.tsx";
+import { Spinner, SpinnerProps } from "../components/Spinner/Spinner";
 
-const Template = (args: ISpinnerProps) => <Spinner {...args} />;
+const Template = (args: SpinnerProps) => <Spinner {...args} />;
 
 export const PrimarySpinner = Template.bind({});
 PrimarySpinner.args = {
