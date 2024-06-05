@@ -1,23 +1,24 @@
-// import React from "react";
-// import { Alert, IAlertProps } from "./Alert.tsx";
+import React from "react";
+import { Alert, AlertProps } from "../components/Alert/Alert";
 
-// const Template = (args: IAlertProps) => <Alert {...args} />;
+const Template = (args: AlertProps) => <Alert {...args} />;
 
-// export const Information = Template.bind({});
-// Information.args = {
-//     text: "Information Alert",
-//     type: "info"
-// };
+export const Information = Template.bind({});
+Information.args = {
+    text: "Information Alert",
+    type: "info2"
+};
 
-// export const Error = Template.bind({});
-// Error.args = {
-//     text: "Error Alert",
-//     type: "error"
-// };
+export const Error = Template.bind({});
+Error.args = {
 
-// const defaultExport = {
-//     title: "Components/Alert",
-//     component: Alert,
-// };
+    text: "Error Alert",
+    type: "error2"
+};
 
-// export default defaultExport;
+const defaultExport = {
+    title: "Components/Card",
+    component: Alert,
+};
+
+export default defaultExport;
