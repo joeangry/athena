@@ -13,12 +13,12 @@ export enum Variants {
 }
 
 export enum Styles {
-    danger,
-    dark,    
-    info,
-    light,
-    primary,
-    secondary,
-    success,    
-    warning        
+    danger = "danger",
+    dark = "dark",
+    info = "info",
+    light = "light",
+    primary = "primary",
+    secondary = "secondary",
+    success = "success",
+    warning = "warning"
 }

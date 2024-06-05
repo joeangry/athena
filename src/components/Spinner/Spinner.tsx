@@ -2,13 +2,13 @@ import React from "react";
 import { Styles, Variants } from "../../packages/BaseProps";
 import "./Spinner.scss";
 
-export type SpinnerStyle = keyof Styles;
-export type SpinnerSize = keyof Variants;
+export type SpinnerStyle = `${Styles}`;
+export type SpinnerSize = `${Variants}`;
 
-export interface ISpinnerProps {
+export type SpinnerProps = {
     type: SpinnerStyle;
     text?: string;
     size?: SpinnerSize;
 }
 
-export const Spinner = (props: ISpinnerProps) => (<div className={`spinner-container ${props.type.toLowerCase()} spinner-${props.size}`}></div>);
+export const Spinner = (props: SpinnerProps) => (<div className={`spinner-container ${props.type.toLowerCase()} spinner-${props.size}`}></div>);
