@@ -13,8 +13,8 @@ module.exports = {
     "addons": [
         "@storybook/addon-a11y",
         "@storybook/addon-links",
-        "@storybook/addon-essentials",
-        "@storybook/preset-create-react-app"
+        "@storybook/preset-create-react-app",
+        "@storybook/addon-docs"
     ],
     framework: {
         name: "@storybook/react-webpack5",
