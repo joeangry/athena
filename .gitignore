@@ -9,6 +9,7 @@
 
 # production
 /build
+/storybook-static
 
 # output directories
 /lib
@@ -20,7 +21,8 @@
 .env.test.local
 .env.production.local
 
-npm-debug.log*
+*.log
 yarn-debug.log*
 yarn-error.log*
 .eslintcache
+
